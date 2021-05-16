@@ -1,0 +1,62 @@
+@import "responsive";
+@import "body";
+@import "colors";
+
+$cards: (
+    bb: red,
+    mtc: blue,
+    bat: purple,
+    dh: orange
+    fp: yellow
+    matenro:  rgb(58, 58, 58)
+);
+/* anidamiento */
+header {
+    li{
+        display: inline-block;
+        position: relative;
+        font-size: 14px;
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 150%; 
+            color: rgb(0, 0, 0);
+            text-shadow: -1px -1px 1px rgb(194, 194, 194), 1px 1px 1px rgb(192, 192, 192), -1px 1px 1px rgb(197, 197, 197), 1px 1px 1px rgb(199, 198, 198);
+        }
+    }
+    ul{
+        li{
+            margin: 10px 10px;
+            display: inline-block;
+        }
+    } 
+}
+/* fin anidamiento*/
+.bgHeader{
+    background: linear-gradient(197deg, rgba(167,0,0,1) 15%, rgba(255,145,0,1) 30%, rgba(249,255,0,1) 44%, rgba(0,10,144,1) 57%, rgba(77,0,148,1) 73%, rgba(113,113,113,1) 90%);
+}
+
+
+/* Footer Style */
+
+footer{
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    a{
+        color: white;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+    a:hover, a:focus{
+        color: white;
+        border-bottom: 1px solid;
+    }
+}
+
+@each $name, $color in $cards {
+    .p-#{$name} {
+        color: $color;
+    }
+}
